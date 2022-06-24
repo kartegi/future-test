@@ -1,0 +1,30 @@
+.collection
+    padding: 1em
+    &--result-length
+        text-align: center
+        margin-bottom: 1em
+        font-weight: bold
+    &--items
+        display: grid
+        justify-content: center
+        grid-template-columns: repeat(3, minmax(200px, 400px))
+        gap: 1.5em
+    &--load-more
+        display: flex
+        justify-content: center
+        width: 100%
+        padding: 1em
+
+.loader-container
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: 2em
+
+@media screen and (max-width: 800px)
+    .collection--items
+        grid-template-columns: repeat(2, minmax(200px, 400px))
+
+@media screen and (max-width: 600px)
+    .collection--items
+        grid-template-columns: minmax(200px, 400px)
