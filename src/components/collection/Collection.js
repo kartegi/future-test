@@ -16,7 +16,7 @@ function Collection() {
     </div>
   ) : (
     <div className="collection">
-      {books ? (
+      {books && books.items?.length ? (
         <>
           <p className="collection--result-length">
             Found {books.totalItems} results
@@ -27,6 +27,8 @@ function Collection() {
             })}
           </div>
         </>
+      ) : books !== null && !books?.items?.length ? (
+        <h2>No result</h2>
       ) : null}
       <div className="collection--load-more">
         <LoadMore />

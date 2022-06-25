@@ -17,7 +17,7 @@ const LoadMore = () => {
     dispatch(fetchMoreBooks(query));
   };
 
-  return books ? (
+  return books && books.items?.length ? (
     <button className="load-more" type="button" onClick={handleLoadMore}>
       Load more
     </button>
