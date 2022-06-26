@@ -83,7 +83,11 @@ function Form() {
       <div className="search-form--filters">
         <div className="search-form--categories">
           <label>Categories</label>
-          <select name="categories" onChange={handleSelectChange}>
+          <select
+            name="categories"
+            onChange={handleSelectChange}
+            value={category}
+          >
             {categories.map((item) => (
               <option key={item.value} value={item.value}>
                 {item.label}
@@ -93,7 +97,7 @@ function Form() {
         </div>
         <div className="search-form--sort">
           <label>Sort</label>
-          <select name="sort" onChange={handleSelectChange}>
+          <select name="sort" onChange={handleSelectChange} value={sort}>
             <option value="relevance">Relevance</option>
             <option value="newest">Newest</option>
           </select>
